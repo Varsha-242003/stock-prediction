@@ -1,0 +1,47 @@
+#HTML file of stock prediction
+# stock.html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Broker Dashboard</title>
+    <link rel="stylesheet" href="stock.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card" id="loginBox">
+            <h1>Stock Broker Login</h1>
+            <input type="email" id="emailInput" placeholder="Enter your email">
+            <button onclick="enterDashboard()">Login</button>
+        </div>
+
+        <div class="card hidden" id="dashboardBox">
+            <h2>Client Dashboard</h2>
+            <div class="email" id="activeUser"></div>
+
+            <select id="stockPicker">
+                <option value="">Select a stock</option>
+                <option value="GOOG">GOOG</option>
+                <option value="TSLA">TSLA</option>
+                <option value="AMZN">AMZN</option>
+                <option value="META">META</option>
+                <option value="NVDA">NVDA</option>
+            </select>
+
+            <button onclick="addStock()">Subscribe Stock</button>
+
+            <div class="stock-grid" id="stockArea"></div>
+
+            <button class="logout" onclick="exitDashboard()">Logout</button>
+        </div>
+
+    </div>
+
+    <script src="stock.js"></script>
+</body>
+
+</html>
